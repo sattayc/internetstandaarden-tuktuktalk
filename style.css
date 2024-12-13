@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+/*W3Schools.com. (n.d.-f). https://www.w3schools.com/cssref/atrule_keyframes.php*/
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -25,7 +26,7 @@
     cursor: pointer;
 }
 
-
+/*W3Schools.com. (n.d.-g). https://www.w3schools.com/css/css3_buttons.asp*/
 .image-button:hover {
     animation: pulse 0.6s ease-in-out infinite;
     opacity: 0.8;
@@ -33,7 +34,7 @@
     transition: transform 0.3s opacity 0.3s;
 }
 
-/* FED 24-25 - Blok 1 - Intro kleurtjes met has en lightdark */
+/*FED 24-25 - Blok 1 - Intro kleurtjes met has en lightdark*/
 :root {
     color-scheme: light dark;
     --bg: light-dark( white, black);
@@ -301,7 +302,6 @@ footer p{
     text-decoration: none;
     padding: 10px;
 }
-
 
 .profiel {
     display: flex;
