@@ -1,7 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
-/*W3Schools.com. (n.d.-f). https://www.w3schools.com/cssref/atrule_keyframes.php*/
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -14,7 +13,7 @@
     }
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -26,41 +25,48 @@
     cursor: pointer;
 }
 
-/*W3Schools.com. (n.d.-g). https://www.w3schools.com/css/css3_buttons.asp*/
 .image-button:hover {
     animation: pulse 0.6s ease-in-out infinite;
     opacity: 0.8;
     transform: scale(1.05);
-    transition: transform 0.3s opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
-/*FED 24-25 - Blok 1 - Intro kleurtjes met has en lightdark*/
 :root {
     color-scheme: light dark;
-    --bg: light-dark( white, black);
-    --clr: light-dark(Black, White);
+    --bg-light: white;
+    --clr-light: black;
+    --bg-dark: black;
+    --clr-dark: white;
+    --clr: var(--clr-light);
 }
 
 html:has([value="light"]:checked) {
     color-scheme: light;
-    color: var(--clr);
-    background-color: var(--bg);
+    color: var(--clr-light);
+    background-color: var(--bg-light);
+    --clr: black;
 }
 
 html:has([value="dark"]:checked) {
     color-scheme: dark;
-    color: var(--clr);
-    background-color: var(--bg);
+    color: var(--clr-dark);
+    background-color: var(--bg-dark);
+    --clr: white;
 }
 
-/*W3Schools.com. (n.d.-c). https://www.w3schools.com/howto/howto_css_switch.asp*/
+body[data-theme="dark"] {
+    --clr: var(--clr-dark);
+    --bg: var(--bg-dark);
+}
+
 .switch {
     position: relative;
     width: 60px;
     height: 34px;
 }
 
-.switch input { 
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
@@ -124,8 +130,7 @@ h1 {
     padding-top: 1em;
 }
 
-
-h2, h3, p, span, a, form, label{
+h2, h3, p, span, a, form, label {
     font-family: "Sour Gummy", sans-serif;
     line-height: 1.4em;
 }
@@ -136,7 +141,6 @@ header {
     color: black;
 }
 
-/* W3Schools.com. (n.d.-b). https://www.w3schools.com/accessibility/accessibility_skip_links.php */
 .skip {
     position: absolute;
     left: -10000px;
@@ -152,8 +156,7 @@ header {
     height: auto;
 }
 
-
-.container{
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -168,13 +171,11 @@ nav a {
     color: black;
     transition: all 0.5s ease;
     text-decoration: none;
-    
 }
 
 nav a:hover {
     color: white;
     background-color: black;
-
 }
 
 nav a:active {
@@ -183,7 +184,7 @@ nav a:active {
 
 nav a:focus {
     color: white;
-    background-color:black;
+    background-color: black;
 }
 
 nav ul {
@@ -197,7 +198,7 @@ nav ul {
 
 a.currentpage {
     border: 2px solid black;
-    background-color: #ffd82b ;
+    background-color: #ffd82b;
     color: black;
     border-radius: 50px;
     padding: 10px 20px;
@@ -219,7 +220,7 @@ a.currentpage {
 .omschrijving a {
     font-size: 1.8vw;
     font-weight: 700;
-    color:var(--clr);
+    color: var(--clr);
     text-decoration: underline;
     transition: all 0.5s ease;
 }
@@ -242,25 +243,25 @@ footer {
     padding-top: 2em;
 }
 
-footer p{
+footer p {
     padding: 0;
 }
 
 .privacy {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     gap: 2em;
     flex-direction: row;
-    background-image: linear-gradient(white,#FFC7FF);
+    background-image: linear-gradient(white, #FFC7FF);
     color: black;
     padding: 2vw 10vw;
 }
 
-.privacy ul{
+.privacy ul {
     list-style-type: none;
 }
 
-.privacy a{
+.privacy a {
     padding-left: 0.25em;
     color: black;
     text-decoration: none;
@@ -282,13 +283,12 @@ footer p{
     flex-direction: column;
 }
 
-.center-column{
+.center-column {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2em;
 }
-
 
 .center-column a {
     color: var(--clr);
@@ -339,12 +339,11 @@ footer p{
     border: 3px solid #ffd82b;
     border-radius: 30px;
     color: var(--clr);
-    background-color:  var(--bg) ;
+    background-color: var(--bg);
     text-align: center;
     padding: 2em 1em 2em 1em;
     width: 50%;
 }
-
 
 .delen-box a {
     border: 2px solid #ffd82b;
@@ -373,21 +372,11 @@ footer p{
     background-color: #ffd82b;
 }
 
-/*W3Schools.com. (n.d.-d). https://www.w3schools.com/css/css_form.asp*/
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 5px 12px;
-    box-sizing: border-box;
-    border: 1px solid var(--clr);
-    border-radius: 30px;
-    color: var(--clr);
-  }
-
 input[type=submit] {
     border: none;
     color: var(--bg);
     padding: 5px 10px;
-    border: 2px solid var(--bg); 
+    border: 2px solid var(--clr);
     border-radius: 30px;
     text-align: center;
     text-decoration: none;
@@ -395,9 +384,10 @@ input[type=submit] {
     font-family: "Sour Gummy", sans-serif;
 }
 
-input[type=submit]:hover{
-    background-color:var(--clr);
-    color:var(--bg);
+input[type=submit]:hover {
+    background-color: var(--bg);
+    color: var(--clr);
+    border: 2px solid var(--clr);
 }
 
 input[type=submit]:active {
@@ -406,5 +396,15 @@ input[type=submit]:active {
 
 input[type=submit]:focus {
     background-color: var(--clr);
-    color:var(--bg);
+    color: var(--bg);
 }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 5px 12px;
+    box-sizing: border-box;
+    border: 2px solid var(--clr);
+    border-radius: 30px;
+    color: var(--clr);
+}
+
